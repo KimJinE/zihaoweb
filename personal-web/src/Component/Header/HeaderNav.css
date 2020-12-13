@@ -1,0 +1,17 @@
+#fullH{
+    height: 3vh;
+    min-height: 20px;
+    width: 100vw;
+    min-width: 1400px;
+    background-color: aqua !important;
+}
+
+#list{
+    width: 60%;
+    margin: auto;
+}
+
+.item_box{
+    display: inline-block;
+    margin-right: 2%;
+}

@@ -1,0 +1,11 @@
+#Home-container{
+    width: 100vw; /* Magic here */
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    min-width: 1400px;
+}
+
+#homeheader{
+
+}
