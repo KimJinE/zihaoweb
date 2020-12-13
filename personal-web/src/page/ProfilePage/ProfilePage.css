@@ -1,0 +1,53 @@
+#Profile-container{
+    width: 100vw; /* Magic here */
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    min-width: 1400px;
+    background-image: url(./../../picture/background2.jpeg);
+    background-repeat: no-repeat;
+    height: 100vh;
+    min-height: 800px;
+    background-size: 100% auto;
+    background-position-x: center;
+    overflow: scroll;
+}
+
+#profile-img{
+    border: solid 3px rgb(135, 158, 31);
+    border-radius: 5px;
+    position: absolute;
+    top: 70px;
+    left: 20%;
+    background-image: url(./../../picture/profile.jpeg);
+    width: 250px;
+    height: 250px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    z-index: 2;
+}
+
+#Topborder{
+    border: solid 3px rgb(135, 158, 31);
+    border-radius: 5px;
+    position: absolute;
+    top: 70px;
+    left: 19.8%;
+    background-color: red;
+    width: 250px;
+    height: 108px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    z-index: 2;
+}
+
+#profile-mainpart{
+    position: relative;
+    border: solid 3px  rgb(135, 158, 31);
+    border-radius: 10px;
+    width: 75%;
+    height: auto;
+    min-height: 1000px;
+    background-color: rgba(100, 100, 100, 0.7);
+    margin: 10% auto auto auto;
+}
