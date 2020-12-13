@@ -9,10 +9,11 @@ export default class HomePage extends React.Component {
                 <div id="homeheader">
                     <HeaderNav/>
                 </div>
-                <p>homepage</p>
-                <div id='mianpart'>
-                    
-                </div>
+                <div id='home-name'></div>
+                <div id='home-name-ch'></div>
+                <div id='home-sentence1'></div>
+                <div id='home-sentence2'></div>
+                <div id='home-welcome'></div>
             </div>
         );
     }

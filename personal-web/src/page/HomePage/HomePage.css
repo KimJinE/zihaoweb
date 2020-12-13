@@ -1,11 +1,86 @@
 #Home-container{
     width: 100vw; /* Magic here */
+    position: relative;
     justify-content: center;
     align-items: center;
-    background-color: red;
-    min-width: 1400px;
+    min-width: 1100px;
+    background-image: url(./../../picture/background.jpeg);
+    background-repeat: no-repeat;
+    height: 100vh;
+    min-height: 800px;
+    background-size: auto 100%;
+    background-position-x: center;
+    overflow: scroll;
 }
 
 #homeheader{
 
+}
+
+#home-name{
+    position: absolute;
+    height: 200px;
+    width: 40%;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position-x: -200px;
+    background-position-y: -30px;
+    background-image: url(./../../picture/name_eng.PNG);
+}
+
+#home-name-ch{
+    top: 190px;
+    position: absolute;
+    width: 40%;
+    transform: translateY(-70px);
+    height: 125px;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position-x: -100px;
+    background-image: url(./../../picture/name_ch.PNG);
+}
+
+#home-sentence1{
+    top: 600px;
+    left: 5%;
+    position: absolute;
+    width: 40%;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-image: url(./../../picture/sentence1.PNG);
+}
+
+#home-sentence2{
+    top: 150px;
+    position: absolute;
+    right:0;
+    width: 30%;
+    height: 175px;
+    background-image: url(./../../picture/sentence2.PNG);
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+}
+
+#home-welcome{
+    top: 375px;
+    left: 10%;
+    width: 80%;
+    position: absolute;
+    height: 250px;
+    background-image: url(./../../picture/welcome2.PNG);
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position-x: center;
+}
+
+#name-text{
+    font-size: 60px;
+}
+
+#home-mianpart{
+    width: 80%;
+    height: auto;
+    margin:auto;
+    margin-top: 5px;
 }
