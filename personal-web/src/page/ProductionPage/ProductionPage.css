@@ -21,7 +21,7 @@
     height: auto;
     min-height: 450px;
     background-color: rgba(100, 100, 100, 0.7);
-    margin: 5% auto auto auto;
+    margin: 5% auto 17% auto;
 }
 
 .production-img{
@@ -31,6 +31,17 @@
     margin-left: 6.25%;
     margin-top: 50px;
     height: 400px;
+}
+
+.production-play{
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(100, 100, 100, 0.7);
+}
+
+.production-img:hover .production-play{
+    display: block;
 }
 
 .production-name{
@@ -45,23 +56,18 @@
 
 #production-controller{
     position: fixed;
+    display: flex;
+    flex-direction: row;
     background-color: rgb(53, 53, 53);
+    align-items: center;
+    color: white;
     width: 100%;
     height: 150px;
     bottom: 0;
 }
 
 .volum{
-    position: absolute;
-    height: 100px;
-    width: 100px;
-    background-color: red;
 }
 
 .musicControls{
-    position: absolute;
-    height: 100px;
-    width: 100px;
-    left: 200px;
-    background-color: red;
 }

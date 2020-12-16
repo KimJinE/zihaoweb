@@ -16,6 +16,7 @@ export default class HeaderNav extends React.Component {
                         <div className='item'>
                             <a
                                 href="/"
+                                className='it'
                                 onClick={() => {
                                 localStorage.setItem("header", 0);
                                 }}
@@ -28,6 +29,7 @@ export default class HeaderNav extends React.Component {
                         <div className='item'>
                             <a
                                 href="/profile"
+                                className='it'
                                 onClick={() => {
                                 localStorage.setItem("header", 0);
                                 }}
@@ -40,6 +42,7 @@ export default class HeaderNav extends React.Component {
                         <div className='item'>
                             <a
                                 href="/production"
+                                className='it'
                                 onClick={() => {
                                 localStorage.setItem("header", 0);
                                 }}
@@ -52,6 +55,7 @@ export default class HeaderNav extends React.Component {
                         <div className='item'>
                             <a
                                 href="/scoring"
+                                className='it'
                                 onClick={() => {
                                 localStorage.setItem("header", 0);
                                 }}
@@ -64,6 +68,7 @@ export default class HeaderNav extends React.Component {
                         <div className='item'>
                             <a
                                 href="/contact"
+                                className='it'
                                 onClick={() => {
                                 localStorage.setItem("header", 0);
                                 }}
