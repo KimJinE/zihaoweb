@@ -18,7 +18,7 @@ export default class ProfilePage extends React.Component {
                     <div id='basic-info'>
                         <p className='basic-style'>1999.6.27</p>
                         <p className='basic-style'>Beijing, China</p>
-                        <p className='basic-style'>Eduction</p>
+                        <p className='basic-style'>Education</p>
                         <p className='basic-style'>2005.9-2011.7<br />
                             Beijing ChaoYang experimental primary school</p>
                         <p className='basic-style'>2011.9-2014.7<br />
