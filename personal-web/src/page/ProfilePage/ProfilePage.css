@@ -51,3 +51,44 @@
     background-color: rgba(100, 100, 100, 0.7);
     margin: 10% auto auto auto;
 }
+
+#profile-name{
+    position: absolute;
+    height: 100px;
+    width: 50%;
+    /* background-color: red; */
+    left: 45%;
+    top: 40px;
+    font-size: 100px;
+    color:white;
+}
+
+#basic-info{
+    position:absolute;
+    /* background-color: blue; */
+    width: 33%;
+    height: 700px;
+    top: 160px;
+    left: 10%;
+}
+
+.basic-style{
+    color: white;
+    font-size: 20px;
+}
+
+#experience{
+    position: absolute;
+    /* background-color: green; */
+    width: 50%;
+    height: 700px;
+    top: 160px;
+    left: 45%;
+    border: solid 2px rgb(127, 128, 126);
+
+}
+
+.exp-info{
+    color: white;
+    font-size: 17px;
+}

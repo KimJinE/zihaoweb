@@ -1,0 +1,14 @@
+#Production-container{
+    width: 100vw; /* Magic here */
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    min-width: 1400px;
+    background-image: url(./../../picture/background2.jpeg);
+    background-repeat: no-repeat;
+    height: 100vh;
+    min-height: 800px;
+    background-size: 100% auto;
+    background-position-x: center;
+    overflow: scroll;
+}
