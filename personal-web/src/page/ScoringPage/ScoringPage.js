@@ -41,63 +41,8 @@ export default class ScoringPage extends React.Component {
     }
 
     playSong = (i) => {
-        // this.setState({currentSong: 1});
-        // alert(this.state.songlist[0].src);
+        this.setState({music: i});
         this.setState({currentplay: 'play'});
-        var currentmusic = this.state.music;
-        if (i === 1) {
-            if (currentmusic === 1) {
-                var m = this.state.music1;
-                if (m === 'stop'){
-                    // this.state.currentSong.play();
-                    this.setState({music1: 'play'});
-                }
-                else{
-                    // this.state.currentSong.pause();
-                    this.setState({music1: 'stop'});
-                }
-            }
-            else {
-                // this.state.currentSong.pause();
-                this.setState({music1: 'play', music: 1, music2: 'stop', music3: 'stop'})
-                // this.state.currentSong.play();
-            }
-        }
-        else if (i === 2) {
-            if (currentmusic === 2) {
-                var m = this.state.music2;
-                if (m === 'stop'){
-                    // this.state.currentSong.play();
-                    this.setState({music2: 'play'});
-                }
-                else{
-                    // this.state.currentSong.pause();
-                    this.setState({music2: 'stop'});
-                }
-            }
-            else {
-                // this.state.currentSong.remove();
-                this.setState({music2: 'play', music: 2, music1: 'stop', music3: 'stop'})
-                // this.state.currentSong.play();
-            }
-        }
-        else{
-            if (currentmusic === 3) {
-                var m = this.state.music3;
-                if (m === 'stop'){
-                    // this.state.currentSong.play();
-                    this.setState({music3: 'play'});
-                }
-                else{
-                    // this.state.currentSong.pause();
-                    this.setState({music3: 'stop'});
-                }
-            }
-            else {
-                this.setState({music3: 'play', music: 3, music1: 'stop', music2: 'stop'})
-                // this.state.currentSong.play();
-            }
-        }
     };
 
     render() {

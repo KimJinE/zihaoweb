@@ -81,7 +81,8 @@
     position: absolute;
     /* background-color: green; */
     width: 50%;
-    height: 700px;
+    height: auto;
+    min-height: 700px;
     top: 160px;
     left: 45%;
     border: solid 2px rgb(127, 128, 126);

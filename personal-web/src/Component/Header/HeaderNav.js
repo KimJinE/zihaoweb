@@ -59,7 +59,7 @@ export default class HeaderNav extends React.Component {
                                 localStorage.setItem("header", 2);
                                 }}
                             >
-                                Music Production
+                                Song Production
                             </a>
                         </div>
                     </div>
