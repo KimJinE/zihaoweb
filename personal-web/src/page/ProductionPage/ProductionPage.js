@@ -4,6 +4,7 @@ import HeaderNav from "../../Component/Header/HeaderNav";
 import "./ProductionPage.css";
 import { AiFillPlayCircle, AiFillPauseCircle } from "react-icons/ai";
 import { BsFillVolumeDownFill } from "react-icons/bs";
+import ReactAudioPlayer from 'react-audio-player';
 
 import p1 from './../../picture/Wake_Up.png';
 import p2 from './../../picture/Phantom_Thief-Debugger.gif';
@@ -31,7 +32,7 @@ export default class ProductionPage extends React.Component {
             prevSong: -1,
             nextSong: 1,
             currentSong: null,
-            music: 1,
+            music: null,
             currentplay: 'stop',
             music1: 'stop',
             music2: 'stop',
@@ -70,6 +71,8 @@ export default class ProductionPage extends React.Component {
 
     playSong = (i) => {
         // this.setState({currentSong: 1});
+        // alert(this.state.songlist[0].src);
+        this.setState({currentplay: 'play'});
         var currentmusic = this.state.music;
         if (i === 1) {
             if (currentmusic === 1) {
@@ -133,14 +136,14 @@ export default class ProductionPage extends React.Component {
         const duration = getTime(this.state.duration);
         return(
             <div id='Production-container'>
-                <audio 
+                {/* <audio 
                     preload="metadata" 
-                    src= {curSong}
+                    src= {curSong.src}
                     ref={(audio) => {this.lectureAudio = audio}} 
                     style={{width: '1px', height: '1px', visibility: 'hidden'}} 
-                    onCanPlay={() => this.handleAudioCanplay()}
-                    onTimeUpdate={() => this.handleTimeUpdate()}>
-                </audio>
+
+                    >
+                </audio> */}
                 <div id="homeheader">
                     <HeaderNav/>
                 </div>
@@ -158,8 +161,9 @@ export default class ProductionPage extends React.Component {
                             }}>
                                 <div className='production-play'>
                                     <bottom className='play-bottom' onClick={() => this.playSong(1)}>
-                                    {this.state.music1 === 'stop' ? <AiFillPlayCircle size='100%' />
-                                    : <AiFillPauseCircle size='100%' />}
+                                        <AiFillPlayCircle size='100%' />
+                                    {/* {this.state.music1 === 'stop' ? <AiFillPlayCircle size='100%' />
+                                    : <AiFillPauseCircle size='100%' />}*/}
                                     </bottom>
                                 </div>
                         </div>
@@ -178,8 +182,9 @@ export default class ProductionPage extends React.Component {
                             }}>
                                 <div className='production-play'>
                                     <bottom className='play-bottom' onClick={() => this.playSong(2)}>
-                                    {this.state.music2 === 'stop' ? <AiFillPlayCircle size='100%' />
-                                    : <AiFillPauseCircle size='100%' />}
+                                        <AiFillPlayCircle size='100%' />
+                                    {/* {this.state.music2 === 'stop' ? <AiFillPlayCircle size='100%' />
+                                    : <AiFillPauseCircle size='100%' />} */}
                                     </bottom>
                                 </div>
                         </div>
@@ -198,25 +203,32 @@ export default class ProductionPage extends React.Component {
                             }}>
                                 <div className='production-play'>
                                     <bottom className='play-bottom' onClick={() => this.playSong(3)}>
-                                    {this.state.music3 === 'stop' ? <AiFillPlayCircle size='100%' />
-                                    : <AiFillPauseCircle size='100%' />}
+                                        <AiFillPlayCircle size='100%' />
+                                    {/* {this.state.music3 === 'stop' ? <AiFillPlayCircle size='100%' />
+                                    : <AiFillPauseCircle size='100%' />} */}
                                     </bottom>
                                 </div>
                         </div>
                         <div className='production-name'>Animals<br />-Zihao Liu</div>
                     </div>
                 </div>
-                <div id='production-controller'>
+                {this.state.currentplay === 'stop' ? <div></div>
+                : <div id='production-controller'>
+                    <ReactAudioPlayer
+                    style={{width: '100%', height: '50px'}}
+                    src={curSong.src}
+                    autoPlay
+                    controls></ReactAudioPlayer>
+                </div> }
+                {/* <div id='production-controller'>
 
-                    {/* volume */}
                     <div id='volum'>
                         <bottom>
                             <BsFillVolumeDownFill />
                         </bottom>
                     </div>
                     <img id='controller-img' src={p1}></img>
-                    
-                    {/* play */}
+
                     <div id='controller-play'>
                         <bottom id='controller-play-bottom' onClick={() => this.playSong(3)}>
                         {this.state.music3 === 'stop' ? <AiFillPlayCircle size='100%' />
@@ -224,7 +236,7 @@ export default class ProductionPage extends React.Component {
                         </bottom>
                     </div>
 
-                    {/* progress bar */}
+
                     <div id='progressb'>
                         <div className="audio-progress" ref={(r) => {
                                 this.audioProgress = r
@@ -235,7 +247,7 @@ export default class ProductionPage extends React.Component {
                                 }}>
                             </div>
 
-                            {/* 小点 */}
+
                             <div className="audio-progress-point-area" ref={(point) => {
                                 this.audioPoint = point
                             }} style={{ left: this.state.left + 'px' }}>
@@ -244,12 +256,12 @@ export default class ProductionPage extends React.Component {
                             </div>
                         </div>
                     </div>
-                    {/* 计时器 */}
-                    {/* <div className="audio-timer">
+
+                    <div className="audio-timer">
                         <p>{this.renderPlayTime(this.state.currentTime)}</p>
                         <p>{this.renderPlayTime(this.state.duration)}</p>
-                    </div> */}
-                </div>
+                    </div>
+                </div> */}
             </div>
         );
     }
