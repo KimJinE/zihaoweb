@@ -127,13 +127,15 @@ export default class ProductionPage extends React.Component {
     };
 
     render() {
+        const curmusic = this.state.music;
+        const curSong = this.state.songlist[curmusic-1];
         const currentTime = getTime(this.state.currentTime);
         const duration = getTime(this.state.duration);
         return(
             <div id='Production-container'>
                 <audio 
                     preload="metadata" 
-                    // src={src} 
+                    src= {curSong}
                     ref={(audio) => {this.lectureAudio = audio}} 
                     style={{width: '1px', height: '1px', visibility: 'hidden'}} 
                     onCanPlay={() => this.handleAudioCanplay()}
@@ -205,32 +207,40 @@ export default class ProductionPage extends React.Component {
                     </div>
                 </div>
                 <div id='production-controller'>
-                    <bottom className='volum'>
-                        <i className='fa fa-volume-down'>d</i>
-                    </bottom>
+
+                    {/* volume */}
+                    <div id='volum'>
+                        <bottom>
+                            <BsFillVolumeDownFill />
+                        </bottom>
+                    </div>
                     <img id='controller-img' src={p1}></img>
                     
+                    {/* play */}
                     <div id='controller-play'>
                         <bottom id='controller-play-bottom' onClick={() => this.playSong(3)}>
                         {this.state.music3 === 'stop' ? <AiFillPlayCircle size='100%' />
                         : <AiFillPauseCircle size='100%' />}
                         </bottom>
                     </div>
-                    {/* progress bar */}
-                    <div className="audio-progress" ref={(r) => {
-                            this.audioProgress = r
-                        }}>
-                        <div className="audio-progress-bar"
-                            ref={(bar) => {
-                                this.progressBar = bar
-                            }}>
-                        </div>
 
-                        {/* 小点 */}
-                        <div className="audio-progress-point-area" ref={(point) => {
-                            this.audioPoint = point
-                        }} style={{ left: this.state.left + 'px' }}>
-                            <div className="audio-progress-point">
+                    {/* progress bar */}
+                    <div id='progressb'>
+                        <div className="audio-progress" ref={(r) => {
+                                this.audioProgress = r
+                            }}>
+                            <div className="audio-progress-bar"
+                                ref={(bar) => {
+                                    this.progressBar = bar
+                                }}>
+                            </div>
+
+                            {/* 小点 */}
+                            <div className="audio-progress-point-area" ref={(point) => {
+                                this.audioPoint = point
+                            }} style={{ left: this.state.left + 'px' }}>
+                                <div className="audio-progress-point">
+                                </div>
                             </div>
                         </div>
                     </div>

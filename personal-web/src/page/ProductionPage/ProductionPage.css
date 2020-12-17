@@ -82,7 +82,10 @@
     bottom: 0;
 }
 
-.volum{
+#volum{
+    height: 100%;
+    width: 15%;
+    background-color: blue;
 }
 
 .musicControls{
@@ -90,14 +93,13 @@
 
 #controller-img{
     height: 100%;
+    margin-left: 2%;
 }
 
 #controller-play{
     position:relative;
     height: 100%;
     width: 12%;
-    background-color: red;
-    margin-left: 2%;
 }
 
 #controller-play-bottom{
@@ -112,4 +114,10 @@
 
 #controller-play-bottom:hover{
     cursor: pointer;
+}
+
+#progressb{
+    width: 60%;
+    height: 100%;
+    background-color: green;
 }
