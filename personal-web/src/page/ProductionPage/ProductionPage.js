@@ -215,7 +215,7 @@ export default class ProductionPage extends React.Component {
                 {this.state.currentplay === 'stop' ? <div></div>
                 : <div id='production-controller'>
                     <ReactAudioPlayer
-                    style={{width: '100%', height: '50px'}}
+                    style={{width: '100%'}}
                     src={curSong.src}
                     autoPlay
                     controls></ReactAudioPlayer>
